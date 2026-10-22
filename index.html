@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中学数学 公式と要点</title>
+<meta name="description" content="中1から中3までの数学の公式と要点を単元ごとに整理。ひとつずつミニ例題つきで、答えはタップで確認できます。">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="top-title" href="#">中学数学 公式と要点</a>
+    <nav class="grade-nav" aria-label="学年">
+      <a href="#g1">中1</a><a href="#g2">中2</a><a href="#g3">中3</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<p class="lead">中1から中3までの数学で、覚えておくと解ける公式と考え方を単元順に並べました。各項目の下に小さな例題があります。まず自分で解いてから「答えを見る」を押してください。</p>
+<div class="tools">
+  <button type="button" id="open-all">答えをすべて開く</button>
+  <button type="button" id="close-all">答えをすべて閉じる</button>
+</div>
+
+<nav class="toc" id="toc" aria-label="目次"><h2>目次</h2></nav>
+
+<!-- ===================== 中1 ===================== -->
+<section class="grade" id="g1">
+<h2>中学1年</h2>
+
+<section class="unit" id="u-seifu">
+<h3>正負の数</h3>
+
+<article class="item">
+<h4><span class="no">1</span>たし算とひき算</h4>
+<div class="point"><ul>
+<li>同じ符号どうしは、絶対値をたして共通の符号をつける。</li>
+<li>違う符号どうしは、絶対値の大きいほうから小さいほうをひき、絶対値の大きいほうの符号をつける。</li>
+<li>ひき算は、ひく数の符号を変えてたし算にする。$a-(-b)=a+b$</li>
+</ul></div>
+<div class="ex"><p class="q">$-7+3-(-5)$ を計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$-7+3+5=1$。ひく数 $-5$ を $+5$ に変えてから左から計算します。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>かけ算とわり算の符号</h4>
+<div class="point"><p>負の数が偶数個なら答えは正、奇数個なら負になる。符号を先に決めてから、絶対値どうしを計算する。</p></div>
+<p>累乗は何を何回かけるかに注意します。$-3^2$ は $3$ を2回かけてマイナスをつけるので $-9$、$(-3)^2$ は $-3$ を2回かけるので $9$ です。</p>
+<div class="ex"><p class="q">$(-2)\times 3\times(-4)$ と $-2^4$ をそれぞれ計算しなさい。</p>
+<details><summary>答えを見る</summary><div>負が2個なので正、$2\times3\times4=24$。$-2^4=-(2\times2\times2\times2)=-16$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>計算の順序</h4>
+<div class="point"><p>累乗とかっこの中 → かけ算・わり算 → たし算・ひき算 の順に計算する。</p></div>
+<div class="ex"><p class="q">$8-(-2)^3\div4$ を計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$(-2)^3=-8$、$-8\div4=-2$、$8-(-2)=10$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>素因数分解</h4>
+<div class="point"><p>自然数を素数だけのかけ算で表す。小さい素数 $2,3,5,7,\dots$ で順にわっていく。</p></div>
+<p>ある数にかけて平方数にしたいとき、素因数分解して指数が奇数の素数を探すと速く解けます。</p>
+<div class="ex"><p class="q">$84$ を素因数分解しなさい。また、$84$ にできるだけ小さい自然数をかけてある数の2乗にするには、何をかければよいか。</p>
+<details><summary>答えを見る</summary><div>$84=2^2\times3\times7$。指数が1の $3$ と $7$ をそろえればよいので $3\times7=21$ をかける。$84\times21=1764=42^2$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-moji">
+<h3>文字と式</h3>
+
+<article class="item">
+<h4><span class="no">1</span>式の表し方のきまり</h4>
+<div class="point"><ul>
+<li>かけ算の記号 $\times$ ははぶき、数を文字の前に書く。文字はふつうアルファベット順。</li>
+<li>$1$ や $-1$ をかけるときは $1$ を書かない。$1\times a=a$、$(-1)\times a=-a$</li>
+<li>同じ文字の積は累乗で書く。わり算は分数の形にする。$x\div3=\dfrac{x}{3}$</li>
+</ul></div>
+<div class="ex"><p class="q">$b\times(-1)\times a\times a$ と $(x+y)\div 4$ を、きまりにしたがって表しなさい。</p>
+<details><summary>答えを見る</summary><div>$-a^2b$ と $\dfrac{x+y}{4}$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>式の値</h4>
+<div class="point"><p>文字に数を代入するとき、負の数はかっこをつけて入れる。</p></div>
+<div class="ex"><p class="q">$x=-2$ のとき、$x^2-3x$ の値を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$(-2)^2-3\times(-2)=4+6=10$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>一次式の計算</h4>
+<div class="point"><p>かっこは分配法則 $a(b+c)=ab+ac$ ではずし、文字の部分が同じ項（同類項）どうしをまとめる。かっこの前がマイナスなら中の符号がすべて変わる。</p></div>
+<div class="ex"><p class="q">$2(3x-1)-(x-4)$ を計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$6x-2-x+4=5x+2$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>数量の関係を式にする</h4>
+<div class="point"><ul>
+<li>道のり $=$ 速さ $\times$ 時間、時間 $=\dfrac{\text{道のり}}{\text{速さ}}$</li>
+<li>$a\%$ は $\dfrac{a}{100}$、$a$ 割は $\dfrac{a}{10}$</li>
+<li>等しい関係は等式、大小の関係は不等式 $<,\ >,\ \leqq,\ \geqq$ で表す。</li>
+</ul></div>
+<div class="ex"><p class="q">1個 $a$ 円のりんご3個を、200円のかごに入れてもらうと、代金は1000円以下だった。この関係を不等式で表しなさい。</p>
+<details><summary>答えを見る</summary><div>$3a+200\leqq1000$。「以下」はその数をふくむので $\leqq$ を使います。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-hoteishiki1">
+<h3>一次方程式</h3>
+
+<article class="item">
+<h4><span class="no">1</span>基本の解き方</h4>
+<div class="point"><p>文字の項を左辺、数の項を右辺に移項して $ax=b$ の形にし、両辺を $a$ でわる。移項すると符号が変わる。</p></div>
+<div class="ex"><p class="q">$5x-3=2x+9$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>$5x-2x=9+3$、$3x=12$、$x=4$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>分数や小数をふくむ方程式</h4>
+<div class="point"><p>分数なら分母の最小公倍数を、小数なら $10$ や $100$ を両辺にかけて係数を整数にする。分子が多項式ならかっこをつけておく。</p></div>
+<div class="ex"><p class="q">$\dfrac{x}{2}-\dfrac{x-1}{3}=1$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>両辺に $6$ をかけて $3x-2(x-1)=6$、$3x-2x+2=6$、$x=4$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>比例式</h4>
+<div class="point">$$a:b=c:d\ \text{ならば}\ ad=bc$$</div>
+<p>外側どうしの積と内側どうしの積が等しくなります。</p>
+<div class="ex"><p class="q">$x:6=4:3$ のとき、$x$ の値を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$3x=24$ なので $x=8$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>文章題の立て方</h4>
+<div class="point"><p>何を $x$ にするか決める → 同じ量を2通りに表して等式にする → 解いた答えが問題に合うか確かめる。</p></div>
+<div class="ex"><p class="q">鉛筆を何人かに配る。1人に3本ずつ配ると8本余り、5本ずつ配ると4本足りない。人数と鉛筆の本数を求めなさい。</p>
+<details><summary>答えを見る</summary><div>人数を $x$ 人とすると、鉛筆の本数は $3x+8$ とも $5x-4$ とも表せる。$3x+8=5x-4$ より $x=6$。本数は $3\times6+8=26$。6人、26本。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-hirei">
+<h3>比例と反比例</h3>
+
+<article class="item">
+<h4><span class="no">1</span>比例</h4>
+<div class="point">$$y=ax\quad(a\text{ は比例定数})$$</div>
+<p>グラフは原点を通る直線です。$x$ が2倍、3倍になると $y$ も2倍、3倍になります。$a$ は $\dfrac{y}{x}$ で求められます。</p>
+<div class="ex"><p class="q">$y$ は $x$ に比例し、$x=3$ のとき $y=-12$ である。$y$ を $x$ の式で表しなさい。</p>
+<details><summary>答えを見る</summary><div>$a=\dfrac{-12}{3}=-4$ なので $y=-4x$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>反比例</h4>
+<div class="point">$$y=\frac{a}{x}\quad(xy=a\ \text{が一定})$$</div>
+<p>グラフは双曲線とよばれる2本の曲線で、座標軸とは交わりません。$x$ と $y$ をかけるといつも同じ数になる、と覚えると比例定数がすぐ出ます。</p>
+<div class="ex"><p class="q">$y$ は $x$ に反比例し、$x=2$ のとき $y=6$ である。$x=-3$ のときの $y$ の値を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$a=2\times6=12$。$y=\dfrac{12}{-3}=-4$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>グラフ上の点と座標</h4>
+<div class="point"><p>点がグラフ上にあるとは、その点の $x$ 座標と $y$ 座標を式に代入すると等式が成り立つということ。</p></div>
+<div class="ex"><p class="q">反比例 $y=\dfrac{12}{x}$ のグラフ上の点で、$x$ 座標、$y$ 座標がともに正の整数である点はいくつあるか。</p>
+<details><summary>答えを見る</summary><div>$xy=12$ となる正の整数の組なので、$x$ は $12$ の約数 $1,2,3,4,6,12$ の6個。6個。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-heimen">
+<h3>平面図形</h3>
+
+<article class="item">
+<h4><span class="no">1</span>直線・角の記号</h4>
+<div class="point"><ul>
+<li>両方向に限りなくのびるのが直線、両端があるのが線分、片方だけのびるのが半直線。</li>
+<li>垂直は $AB\perp CD$、平行は $AB\parallel CD$ と書く。</li>
+<li>点と直線の距離は、点から直線に下ろした垂線の長さ。</li>
+</ul></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>基本の作図3つ</h4>
+<div class="point"><ul>
+<li>垂直二等分線：2点から等しい距離にある点の集まり。</li>
+<li>角の二等分線：角の2辺から等しい距離にある点の集まり。</li>
+<li>垂線：直線上の点、または直線外の点から直線に垂直な線を引く。</li>
+</ul></div>
+<p>作図の問題は「どこから等しい距離か」を読みとって、この3つのどれを使うか決めます。円の中心は弦の垂直二等分線上にあり、円の接線は接点を通る半径に垂直です。</p>
+<div class="ex"><p class="q">三角形ABCの3つの頂点から等しい距離にある点を作図で求めるには、何を引けばよいか。</p>
+<details><summary>答えを見る</summary><div>辺ABと辺BCなど、2辺の垂直二等分線を引き、その交点をとる。この点は三角形の外接円の中心になります。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>おうぎ形の弧の長さと面積</h4>
+<figure>
+<svg viewBox="0 0 200 130" width="200" role="img" aria-label="半径r、中心角aのおうぎ形">
+<path d="M100 115 L30 75 A80 80 0 0 1 170 75 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+<path d="M88 108 A14 14 0 0 1 112 108" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<text x="95" y="98" font-size="13" fill="currentColor">a°</text>
+<text x="52" y="105" font-size="14" fill="currentColor" font-style="italic">r</text>
+<text x="92" y="28" font-size="14" fill="currentColor" font-style="italic">ℓ</text>
+</svg>
+</figure>
+<div class="point">$$\ell=2\pi r\times\frac{a}{360},\qquad S=\pi r^2\times\frac{a}{360}=\frac12\ell r$$</div>
+<p>円全体の何分のいくつかを考えるのが基本です。弧の長さと半径がわかっているなら、中心角を出さずに $S=\dfrac12\ell r$ で面積が出ます。</p>
+<div class="ex"><p class="q">半径6cm、中心角120°のおうぎ形の弧の長さと面積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$\dfrac{120}{360}=\dfrac13$ なので、弧は $12\pi\times\dfrac13=4\pi$ cm、面積は $36\pi\times\dfrac13=12\pi$ cm²。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>図形の移動</h4>
+<div class="point"><p>平行移動、回転移動、対称移動の3種類。どの移動でも形と大きさは変わらない。対称移動では、対応する点を結ぶ線分が対称の軸で垂直に二等分される。</p></div>
+</article>
+</section>
+
+<section class="unit" id="u-kukan">
+<h3>空間図形</h3>
+
+<article class="item">
+<h4><span class="no">1</span>柱体と錐体の体積</h4>
+<div class="point">$$\text{柱体 } V=Sh,\qquad \text{錐体 } V=\frac13Sh\quad(S\text{ は底面積、}h\text{ は高さ})$$</div>
+<p>錐体は同じ底面と高さの柱体の $\dfrac13$ です。まず柱体だと思って計算し、最後に $\dfrac13$ をかけると間違えにくくなります。</p>
+<div class="ex"><p class="q">底面の半径3cm、高さ4cmの円錐の体積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>底面積 $9\pi$、円柱なら $36\pi$、その $\dfrac13$ で $12\pi$ cm³。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>円錐の展開図と表面積</h4>
+<div class="point">$$\text{側面のおうぎ形の中心角}=360^\circ\times\frac{\text{底面の半径}}{\text{母線}},\qquad \text{側面積}=\pi\times\text{母線}\times\text{底面の半径}$$</div>
+<p>側面のおうぎ形の弧の長さは、底面の円周と等しくなります。ここから中心角の式が出てきます。</p>
+<div class="ex"><p class="q">母線6cm、底面の半径2cmの円錐で、側面のおうぎ形の中心角と表面積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>中心角は $360\times\dfrac26=120^\circ$。側面積 $\pi\times6\times2=12\pi$、底面積 $4\pi$、表面積は $16\pi$ cm²。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>球の体積と表面積</h4>
+<div class="point">$$V=\frac43\pi r^3,\qquad S=4\pi r^2$$</div>
+<div class="ex"><p class="q">半径3cmの球の体積と表面積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>体積 $\dfrac43\pi\times27=36\pi$ cm³、表面積 $4\pi\times9=36\pi$ cm²。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>直線と平面の位置関係</h4>
+<div class="point"><ul>
+<li>2直線は、交わる、平行、ねじれの位置の3通り。ねじれの位置は、平行でなく交わりもしない関係。</li>
+<li>直線が平面と交わる点を通る2本の直線と垂直なら、その直線は平面に垂直。</li>
+</ul></div>
+<div class="ex"><p class="q">立方体ABCD-EFGHで、辺ABとねじれの位置にある辺はいくつあるか。</p>
+<details><summary>答えを見る</summary><div>平行な辺はDC・EF・HG、交わる辺はAD・AE・BC・BF。残りのCG・DH・EH・FGの4本。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>回転体</h4>
+<div class="point"><p>長方形を1辺を軸に回すと円柱、直角三角形を直角をはさむ辺を軸に回すと円錐、半円を直径を軸に回すと球になる。軸から離れた辺が側面をつくる。</p></div>
+</article>
+</section>
+
+<section class="unit" id="u-data1">
+<h3>データの活用（代表値と度数分布）</h3>
+
+<article class="item">
+<h4><span class="no">1</span>度数分布表の用語</h4>
+<div class="point"><ul>
+<li>階級：区切った区間。階級値：階級のまん中の値。度数：その階級に入る個数。</li>
+<li>相対度数 $=\dfrac{\text{その階級の度数}}{\text{度数の合計}}$</li>
+<li>累積度数：最初の階級からその階級までの度数の合計。累積相対度数も同じように足していく。</li>
+</ul></div>
+<div class="ex"><p class="q">40人のうち、ある階級の度数が6人だった。この階級の相対度数を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$\dfrac{6}{40}=0.15$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>代表値と範囲</h4>
+<div class="point"><ul>
+<li>平均値：合計 $\div$ 個数。度数分布表では（階級値 $\times$ 度数）の合計 $\div$ 総数。</li>
+<li>中央値：小さい順に並べたまん中の値。個数が偶数なら、まん中2つの平均。</li>
+<li>最頻値：いちばん多く出てくる値。度数分布表では度数が最大の階級の階級値。</li>
+<li>範囲：最大値 $-$ 最小値。</li>
+</ul></div>
+<div class="ex"><p class="q">データ $2,4,4,6,9,11$ の平均値、中央値、最頻値、範囲を求めなさい。</p>
+<details><summary>答えを見る</summary><div>平均値 $36\div6=6$、中央値 $\dfrac{4+6}{2}=5$、最頻値 $4$、範囲 $11-2=9$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>相対度数と確率</h4>
+<div class="point"><p>同じ実験を何回もくり返すと、あることがらが起こる相対度数はある値に近づいていく。その値をそのことがらの起こりやすさ（確率）と考える。</p></div>
+</article>
+</section>
+</section>
+
+<!-- ===================== 中2 ===================== -->
+<section class="grade" id="g2">
+<h2>中学2年</h2>
+
+<section class="unit" id="u-shiki2">
+<h3>式の計算</h3>
+
+<article class="item">
+<h4><span class="no">1</span>単項式・多項式と次数</h4>
+<div class="point"><p>数や文字のかけ算だけでできた式が単項式、単項式の和が多項式。単項式の次数はかけ合わされた文字の個数、多項式の次数は各項の次数のうち最大のもの。</p></div>
+<div class="ex"><p class="q">$3x^2y-5xy+2$ は何次式か。</p>
+<details><summary>答えを見る</summary><div>$3x^2y$ が文字3個で最大なので3次式。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>多項式のたし算・ひき算</h4>
+<div class="point"><p>かっこをはずして同類項をまとめる。ひく式はすべての項の符号を変える。</p></div>
+<div class="ex"><p class="q">$(3a-2b)-(a-5b)$ を計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$3a-2b-a+5b=2a+3b$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>単項式のかけ算・わり算</h4>
+<div class="point"><p>わる式は逆数にしてかけ算に直し、1つの分数にまとめてから約分する。符号を先に決める。</p></div>
+<div class="ex"><p class="q">$6a^2b\div3ab\times2b$ を計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$\dfrac{6a^2b\times2b}{3ab}=4ab$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>等式の変形</h4>
+<div class="point"><p>求めたい文字を方程式の $x$ だと思い、移項と両辺のわり算で「その文字 $=$ 」の形にする。</p></div>
+<div class="ex"><p class="q">$3x+2y=6$ を $y$ について解きなさい。</p>
+<details><summary>答えを見る</summary><div>$2y=6-3x$、$y=\dfrac{6-3x}{2}$（$y=-\dfrac32x+3$ でもよい）。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>文字式を使った説明</h4>
+<div class="point"><ul>
+<li>整数を $n$ とすると、偶数は $2n$、奇数は $2n+1$、連続する3つの整数は $n,\ n+1,\ n+2$。</li>
+<li>十の位が $a$、一の位が $b$ の2けたの数は $10a+b$。</li>
+<li>「$\bigcirc$ の倍数である」は「$\bigcirc\times(\text{整数})$ の形になる」と示す。</li>
+</ul></div>
+<div class="ex"><p class="q">2けたの自然数と、その十の位と一の位を入れかえた数の和は11の倍数になる。このことを説明しなさい。</p>
+<details><summary>答えを見る</summary><div>もとの数を $10a+b$ とすると、入れかえた数は $10b+a$。和は $11a+11b=11(a+b)$。$a+b$ は整数なので、和は11の倍数である。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-renritsu">
+<h3>連立方程式</h3>
+
+<article class="item">
+<h4><span class="no">1</span>加減法</h4>
+<div class="point"><p>どちらかの文字の係数の絶対値をそろえ、2つの式をたすかひくかして1つの文字を消す。</p></div>
+<div class="ex"><p class="q">$\begin{cases}2x+y=7\\ x-y=2\end{cases}$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>2式をたすと $3x=9$、$x=3$。下の式に代入して $y=1$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>代入法</h4>
+<div class="point"><p>$y=\cdots$ や $x=\cdots$ の形の式があるときは、それをもう一方の式に代入して1つの文字を消す。代入する式にはかっこをつける。</p></div>
+<div class="ex"><p class="q">$\begin{cases}y=2x-1\\ 3x+2y=12\end{cases}$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>$3x+2(2x-1)=12$、$7x=14$、$x=2$。$y=3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>$A=B=C$ の形</h4>
+<div class="point"><p>$A=B$、$A=C$、$B=C$ のうち2つを選んで連立方程式にする。数だけの式があればそれと組み合わせると楽になる。</p></div>
+<div class="ex"><p class="q">$x+y=2x-y=6$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>$x+y=6$ と $2x-y=6$。たして $3x=12$、$x=4$、$y=2$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>文章題</h4>
+<div class="point"><p>わからない量を2つ文字で置き、個数の関係と金額などの関係で式を2本つくる。</p></div>
+<div class="ex"><p class="q">1個80円のガムと1個120円のパンを合わせて10個買ったら、代金は1040円だった。それぞれ何個買ったか。</p>
+<details><summary>答えを見る</summary><div>ガム $x$ 個、パン $y$ 個とすると、$x+y=10$、$80x+120y=1040$。下の式を40でわると $2x+3y=26$。$x=10-y$ を代入して $y=6$、$x=4$。ガム4個、パン6個。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-ichiji">
+<h3>一次関数</h3>
+
+<article class="item">
+<h4><span class="no">1</span>式と変化の割合</h4>
+<div class="point">$$y=ax+b,\qquad \text{変化の割合}=\frac{y\text{ の増加量}}{x\text{ の増加量}}=a$$</div>
+<p>一次関数では変化の割合はいつも一定で、グラフの傾き $a$ と等しくなります。$b$ は $y$ 軸との交点の $y$ 座標（切片）です。</p>
+<div class="ex"><p class="q">一次関数 $y=-3x+5$ で、$x$ が2から6まで増加するとき、$y$ の増加量を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$y$ の増加量 $=$ 変化の割合 $\times$ $x$ の増加量 $=-3\times4=-12$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>直線の式の求め方</h4>
+<div class="point"><ul>
+<li>2点を通るとき：傾き $a=\dfrac{y_2-y_1}{x_2-x_1}$ を出し、1点を代入して $b$ を求める。</li>
+<li>平行な2直線は傾きが等しい。</li>
+</ul></div>
+<div class="ex"><p class="q">2点 $(1,3)$、$(3,7)$ を通る直線の式を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$a=\dfrac{7-3}{3-1}=2$。$3=2\times1+b$ より $b=1$。$y=2x+1$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>2直線の交点</h4>
+<div class="point"><p>2直線の交点の座標は、2つの式を連立方程式として解いた解。</p></div>
+<div class="ex"><p class="q">2直線 $y=x+1$ と $y=-2x+7$ の交点の座標を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$x+1=-2x+7$、$x=2$、$y=3$。$(2,3)$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>方程式のグラフ</h4>
+<div class="point"><ul>
+<li>$ax+by=c$ は $y$ について解けば一次関数のグラフ（直線）になる。</li>
+<li>$y=k$ は $x$ 軸に平行な直線、$x=h$ は $y$ 軸に平行な直線。</li>
+</ul></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>グラフと三角形の面積</h4>
+<div class="point"><p>座標軸上の辺を底辺に選ぶと、高さは残りの頂点の座標からすぐ読める。</p></div>
+<div class="ex"><p class="q">直線 $y=-x+4$ と $x$ 軸、$y$ 軸で囲まれた三角形の面積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$x$ 軸との交点 $(4,0)$、$y$ 軸との交点 $(0,4)$。面積は $\dfrac12\times4\times4=8$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-heikou">
+<h3>平行と合同</h3>
+
+<article class="item">
+<h4><span class="no">1</span>対頂角・同位角・錯角</h4>
+<figure>
+<svg viewBox="0 0 240 140" width="240" role="img" aria-label="2本の平行線と、それに交わる直線。同位角と錯角が等しい">
+<line x1="10" y1="40" x2="230" y2="40" stroke="currentColor" stroke-width="2"/>
+<line x1="10" y1="100" x2="230" y2="100" stroke="currentColor" stroke-width="2"/>
+<line x1="70" y1="135" x2="170" y2="5" stroke="currentColor" stroke-width="2"/>
+<path d="M159.1 40 A16 16 0 0 0 152.8 27.3" fill="none" stroke="#d1495b" stroke-width="2.5"/>
+<path d="M112.9 100 A16 16 0 0 0 106.7 87.3" fill="none" stroke="#d1495b" stroke-width="2.5"/>
+<path d="M127.1 40 A16 16 0 0 0 133.3 52.7" fill="none" stroke="#2e86ab" stroke-width="2.5"/>
+<text x="163" y="31" font-size="12" fill="currentColor">a</text>
+<text x="116" y="90" font-size="12" fill="currentColor">b</text>
+<text x="116" y="60" font-size="12" fill="currentColor">c</text>
+</svg>
+<figcaption>平行線では、同位角 a と b、錯角 b と c が等しい</figcaption>
+</figure>
+<div class="point"><ul>
+<li>対頂角は等しい。</li>
+<li>2直線が平行なら、同位角・錯角は等しい。逆に、同位角か錯角が等しければ2直線は平行。</li>
+</ul></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>三角形の内角と外角</h4>
+<div class="point"><ul>
+<li>三角形の内角の和は $180^\circ$。</li>
+<li>三角形の1つの外角は、となり合わない2つの内角の和に等しい。</li>
+</ul></div>
+<p>へこんだ四角形（ブーメラン形）のへこんだ角は、ほかの3つの角の和になります。外角の性質を2回使うと導けます。</p>
+<div class="ex"><p class="q">三角形の2つの内角が $50^\circ$ と $65^\circ$ のとき、残りの角の外角を求めなさい。</p>
+<details><summary>答えを見る</summary><div>外角はとなり合わない2つの内角の和なので $50^\circ+65^\circ=115^\circ$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>多角形の内角と外角</h4>
+<div class="point">$$n\text{ 角形の内角の和}=180^\circ\times(n-2),\qquad \text{外角の和}=360^\circ$$</div>
+<p>正多角形の1つの外角は $360^\circ\div n$ です。内角を直接出すより、外角から出して $180^\circ$ からひくほうが速いことが多いです。</p>
+<div class="ex"><p class="q">正十二角形の1つの内角を求めなさい。</p>
+<details><summary>答えを見る</summary><div>1つの外角は $360^\circ\div12=30^\circ$、内角は $180^\circ-30^\circ=150^\circ$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>三角形の合同条件</h4>
+<div class="point"><ul>
+<li>3組の辺がそれぞれ等しい。</li>
+<li>2組の辺とその間の角がそれぞれ等しい。</li>
+<li>1組の辺とその両端の角がそれぞれ等しい。</li>
+</ul></div>
+<p>証明は、仮定から何がわかるか、どの図形の性質を根拠にするかを1行ずつ書き、最後に合同条件を書いて結論を述べます。</p>
+</article>
+</section>
+
+<section class="unit" id="u-sankaku">
+<h3>三角形と四角形</h3>
+
+<article class="item">
+<h4><span class="no">1</span>二等辺三角形</h4>
+<div class="point"><ul>
+<li>2つの底角は等しい。逆に、2つの角が等しい三角形は二等辺三角形。</li>
+<li>頂角の二等分線は、底辺を垂直に二等分する。</li>
+</ul></div>
+<div class="ex"><p class="q">AB=ACの二等辺三角形ABCで、$\angle A=40^\circ$ のとき $\angle B$ を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$(180^\circ-40^\circ)\div2=70^\circ$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>直角三角形の合同条件</h4>
+<div class="point"><ul>
+<li>斜辺と1つの鋭角がそれぞれ等しい。</li>
+<li>斜辺と他の1辺がそれぞれ等しい。</li>
+</ul></div>
+<p>使えるのは直角三角形だけです。証明では「直角三角形で」と書いてから使います。</p>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>平行四辺形の性質と条件</h4>
+<div class="point"><p>四角形が次のどれかを満たせば平行四辺形。平行四辺形ならすべて成り立つ。</p><ul>
+<li>2組の対辺がそれぞれ平行</li>
+<li>2組の対辺がそれぞれ等しい</li>
+<li>2組の対角がそれぞれ等しい</li>
+<li>対角線がそれぞれの中点で交わる</li>
+<li>1組の対辺が平行でその長さが等しい</li>
+</ul></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>特別な平行四辺形</h4>
+<div class="point"><ul>
+<li>長方形：対角線の長さが等しい。</li>
+<li>ひし形：対角線が垂直に交わる。</li>
+<li>正方形：対角線の長さが等しく、垂直に交わる。</li>
+</ul></div>
+<div class="ex"><p class="q">平行四辺形ABCDに「AC=BD」という条件を加えると、どんな四角形になるか。</p>
+<details><summary>答えを見る</summary><div>対角線の長さが等しい平行四辺形なので長方形。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>平行線と面積（等積変形）</h4>
+<div class="point"><p>$PQ\parallel AB$ なら、$\triangle PAB$ と $\triangle QAB$ の面積は等しい。底辺が共通で高さが等しいから。</p></div>
+<p>形を変えても面積を保ったまま、頂点を平行線にそって動かせます。台形の対角線でできる三角形の面積比較や、土地の境界をまっすぐにする問題で使います。</p>
+</article>
+</section>
+
+<section class="unit" id="u-kakuritsu">
+<h3>確率</h3>
+
+<article class="item">
+<h4><span class="no">1</span>確率の求め方</h4>
+<div class="point">$$\text{確率}=\frac{\text{そのことがらが起こる場合の数}}{\text{起こりうるすべての場合の数}}$$</div>
+<p>どの場合も同じ程度に起こると考えられるときに使えます。数え落としを防ぐには、樹形図か表をかきます。</p>
+<div class="ex"><p class="q">大小2つのさいころを投げるとき、出る目の和が7になる確率を求めなさい。</p>
+<details><summary>答えを見る</summary><div>全部で $6\times6=36$ 通り。和が7は $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$ の6通り。$\dfrac{6}{36}=\dfrac16$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>起こらない確率</h4>
+<div class="point">$$(\text{A が起こらない確率})=1-(\text{A が起こる確率})$$</div>
+<p>「少なくとも1回」は、1回も起こらない場合を全体からひくと速く求められます。</p>
+<div class="ex"><p class="q">3枚の硬貨を同時に投げるとき、少なくとも1枚は表が出る確率を求めなさい。</p>
+<details><summary>答えを見る</summary><div>全部で $2^3=8$ 通り。3枚とも裏は1通りなので $1-\dfrac18=\dfrac78$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>選ぶか並べるか</h4>
+<div class="point"><p>順番を区別するか（並べる）、区別しないか（選ぶ）を最初に決める。選ぶときは同じ組を2回数えないようにする。</p></div>
+<div class="ex"><p class="q">A、B、C、Dの4人から、委員長と副委員長を1人ずつ選ぶ方法と、2人の係を選ぶ方法はそれぞれ何通りか。</p>
+<details><summary>答えを見る</summary><div>委員長と副委員長は順番を区別するので $4\times3=12$ 通り。2人の係は区別しないので $12\div2=6$ 通り。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-data2">
+<h3>データの活用（四分位数と箱ひげ図）</h3>
+
+<article class="item">
+<h4><span class="no">1</span>四分位数</h4>
+<div class="point"><ul>
+<li>データを小さい順に並べ、中央値で前半と後半に分ける。</li>
+<li>前半の中央値が第1四分位数、全体の中央値が第2四分位数、後半の中央値が第3四分位数。</li>
+<li>四分位範囲 $=$ 第3四分位数 $-$ 第1四分位数</li>
+</ul></div>
+<p>データの個数が奇数のときは、全体の中央値を前半にも後半にも入れずに分けます。</p>
+<div class="ex"><p class="q">データ $1,3,4,6,7,9,10,12$ の第1・第2・第3四分位数と四分位範囲を求めなさい。</p>
+<details><summary>答えを見る</summary><div>第2四分位数 $\dfrac{6+7}{2}=6.5$。前半 $1,3,4,6$ の中央値 $3.5$ が第1四分位数、後半 $7,9,10,12$ の中央値 $9.5$ が第3四分位数。四分位範囲 $9.5-3.5=6$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>箱ひげ図の読み方</h4>
+<figure>
+<svg viewBox="0 0 260 70" width="260" role="img" aria-label="箱ひげ図。左から最小値、第1四分位数、中央値、第3四分位数、最大値">
+<line x1="20" y1="30" x2="80" y2="30" stroke="currentColor" stroke-width="2"/>
+<rect x="80" y="15" width="100" height="30" fill="none" stroke="currentColor" stroke-width="2"/>
+<line x1="120" y1="15" x2="120" y2="45" stroke="currentColor" stroke-width="2"/>
+<line x1="180" y1="30" x2="240" y2="30" stroke="currentColor" stroke-width="2"/>
+<line x1="20" y1="22" x2="20" y2="38" stroke="currentColor" stroke-width="2"/>
+<line x1="240" y1="22" x2="240" y2="38" stroke="currentColor" stroke-width="2"/>
+<text x="8" y="62" font-size="10" fill="currentColor">最小値</text>
+<text x="68" y="62" font-size="10" fill="currentColor">Q1</text>
+<text x="108" y="62" font-size="10" fill="currentColor">中央値</text>
+<text x="170" y="62" font-size="10" fill="currentColor">Q3</text>
+<text x="225" y="62" font-size="10" fill="currentColor">最大値</text>
+</svg>
+</figure>
+<div class="point"><p>箱の中にデータのまん中の約半分が入る。箱が長いほど、まん中あたりのデータが散らばっている。平均値は箱ひげ図からは読みとれない。</p></div>
+</article>
+</section>
+</section>
+
+<!-- ===================== 中3 ===================== -->
+<section class="grade" id="g3">
+<h2>中学3年</h2>
+
+<section class="unit" id="u-tenkai">
+<h3>展開と因数分解</h3>
+
+<article class="item">
+<h4><span class="no">1</span>乗法公式</h4>
+<div class="point">$$\begin{aligned}
+(x+a)(x+b)&=x^2+(a+b)x+ab\\
+(a+b)^2&=a^2+2ab+b^2\\
+(a-b)^2&=a^2-2ab+b^2\\
+(a+b)(a-b)&=a^2-b^2
+\end{aligned}$$</div>
+<div class="ex"><p class="q">$(x-3)(x+5)$ と $(2x+1)^2$ を展開しなさい。</p>
+<details><summary>答えを見る</summary><div>$x^2+2x-15$、$4x^2+4x+1$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>因数分解</h4>
+<div class="point"><p>まず共通因数をくくり出す。残りを乗法公式の逆で分解する。$x^2+px+q$ は、かけて $q$、たして $p$ になる2数を探す。</p></div>
+<div class="ex"><p class="q">$x^2-5x+6$、$3x^2-12$、$x^2+6x+9$ を因数分解しなさい。</p>
+<details><summary>答えを見る</summary><div>$(x-2)(x-3)$。$3(x^2-4)=3(x+2)(x-2)$。$(x+3)^2$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>式の計算の工夫</h4>
+<div class="point"><p>数の計算も乗法公式や因数分解の形にすると暗算できる。同じかたまりが出てくる式は、1文字に置きかえる。</p></div>
+<div class="ex"><p class="q">$51^2-49^2$ と $103^2$ をくふうして計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$(51+49)(51-49)=100\times2=200$。$(100+3)^2=10000+600+9=10609$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-heihoukon">
+<h3>平方根</h3>
+
+<article class="item">
+<h4><span class="no">1</span>平方根の意味と大小</h4>
+<div class="point"><p>2乗して $a$ になる数を $a$ の平方根といい、正と負の2つある（$\pm\sqrt a$）。$0<a<b$ なら $\sqrt a<\sqrt b$。</p></div>
+<p>大小を比べるときは、すべてを2乗するか、すべてを $\sqrt{\ }$ の形にそろえます。</p>
+<div class="ex"><p class="q">$3,\ \sqrt8,\ \sqrt{10}$ を小さい順に並べなさい。</p>
+<details><summary>答えを見る</summary><div>$3=\sqrt9$ なので $\sqrt8<3<\sqrt{10}$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>かけ算・わり算と簡単にする方法</h4>
+<div class="point">$$\sqrt a\times\sqrt b=\sqrt{ab},\qquad \sqrt{a^2b}=a\sqrt b\quad(a>0)$$</div>
+<p>根号の中は、できるだけ小さい自然数にします。中の数を素因数分解して、2つそろった素数を外に出します。</p>
+<div class="ex"><p class="q">$\sqrt{48}$ を $a\sqrt b$ の形にしなさい。</p>
+<details><summary>答えを見る</summary><div>$48=4^2\times3$ なので $4\sqrt3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>分母の有理化</h4>
+<div class="point">$$\frac{a}{\sqrt b}=\frac{a\times\sqrt b}{\sqrt b\times\sqrt b}=\frac{a\sqrt b}{b}$$</div>
+<div class="ex"><p class="q">$\dfrac{6}{\sqrt3}$ の分母を有理化しなさい。</p>
+<details><summary>答えを見る</summary><div>$\dfrac{6\sqrt3}{3}=2\sqrt3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>たし算・ひき算と展開</h4>
+<div class="point"><p>根号の中が同じものどうしだけまとめられる。先に $a\sqrt b$ の形に直してから計算する。展開は文字式と同じ乗法公式を使う。</p></div>
+<div class="ex"><p class="q">$\sqrt{12}+\sqrt{27}$ と $(\sqrt3+1)^2$ を計算しなさい。</p>
+<details><summary>答えを見る</summary><div>$2\sqrt3+3\sqrt3=5\sqrt3$。$3+2\sqrt3+1=4+2\sqrt3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>整数部分と小数部分</h4>
+<div class="point"><p>$\sqrt a$ をはさむ連続した平方数を探して整数部分を決める。小数部分 $=\sqrt a-$ 整数部分。</p></div>
+<div class="ex"><p class="q">$\sqrt7$ の小数部分を $a$ とするとき、$a$ を根号を使って表しなさい。</p>
+<details><summary>答えを見る</summary><div>$\sqrt4<\sqrt7<\sqrt9$ より整数部分は2。$a=\sqrt7-2$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-niji">
+<h3>二次方程式</h3>
+
+<article class="item">
+<h4><span class="no">1</span>因数分解で解く</h4>
+<div class="point">$$AB=0\ \text{ならば}\ A=0\ \text{または}\ B=0$$</div>
+<div class="ex"><p class="q">$x^2-x-12=0$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>$(x-4)(x+3)=0$ より $x=4,\ -3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>平方根の考えで解く</h4>
+<div class="point">$$(x+p)^2=q\ \Rightarrow\ x=-p\pm\sqrt q$$</div>
+<div class="ex"><p class="q">$(x-2)^2=5$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>$x-2=\pm\sqrt5$、$x=2\pm\sqrt5$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>解の公式</h4>
+<div class="point">$$ax^2+bx+c=0\ \text{の解は}\ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$</div>
+<p>因数分解できないときに使います。最後に根号の中を簡単にし、約分できるか確かめます。</p>
+<div class="ex"><p class="q">$2x^2+3x-1=0$ を解きなさい。</p>
+<details><summary>答えを見る</summary><div>$x=\dfrac{-3\pm\sqrt{9+8}}{4}=\dfrac{-3\pm\sqrt{17}}{4}$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>解から係数を求める</h4>
+<div class="point"><p>解がわかっていれば、それを方程式に代入して係数を求める。そのあと方程式を解き直して、もう1つの解を出す。</p></div>
+<div class="ex"><p class="q">$x^2+ax-6=0$ の解の1つが2のとき、$a$ の値ともう1つの解を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$4+2a-6=0$ より $a=1$。$x^2+x-6=(x+3)(x-2)=0$ なので、もう1つの解は $-3$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-nijou">
+<h3>関数 $y=ax^2$</h3>
+
+<article class="item">
+<h4><span class="no">1</span>グラフの形</h4>
+<div class="point"><p>原点を頂点とし、$y$ 軸について対称な放物線。$a>0$ なら上に開き、$a<0$ なら下に開く。$a$ の絶対値が大きいほど開き方が小さい。</p></div>
+<div class="ex"><p class="q">$y=ax^2$ のグラフが点 $(-2,12)$ を通るとき、$a$ の値を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$12=a\times(-2)^2$ より $a=3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>変化の割合</h4>
+<div class="point">$$x\text{ が }p\text{ から }q\text{ まで増加するときの変化の割合}=\frac{aq^2-ap^2}{q-p}=a(p+q)$$</div>
+<p>一次関数と違い、区間によって変化の割合が変わります。分数の計算をしなくても $a(p+q)$ ですぐ出せます。</p>
+<div class="ex"><p class="q">$y=2x^2$ で、$x$ が1から3まで増加するときの変化の割合を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$2\times(1+3)=8$。確かめると $\dfrac{18-2}{3-1}=8$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>変域</h4>
+<div class="point"><p>$x$ の変域に0がふくまれるとき、$y$ の最小値（$a<0$ なら最大値）は0になる。両端の値だけで決めないこと。</p></div>
+<div class="ex"><p class="q">$y=x^2$ で、$x$ の変域が $-2\leqq x\leqq3$ のとき、$y$ の変域を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$x=0$ で最小値0、$x=3$ で最大値9。$0\leqq y\leqq9$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>放物線と直線</h4>
+<div class="point"><p>交点の $x$ 座標は、2つの式を等号で結んだ二次方程式の解。放物線 $y=ax^2$ 上の2点（$x$ 座標 $p,q$）を通る直線は、傾きが $a(p+q)$ になる。</p></div>
+<div class="ex"><p class="q">放物線 $y=x^2$ と直線 $y=x+2$ の交点をA、Bとし、原点をOとする。△OABの面積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$x^2=x+2$ より $x=-1,\ 2$。A$(-1,1)$、B$(2,4)$。直線と $y$ 軸の交点 $(0,2)$ で△OABを左右2つに分けると、$\dfrac12\times2\times1+\dfrac12\times2\times2=3$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-souji">
+<h3>相似な図形</h3>
+
+<article class="item">
+<h4><span class="no">1</span>三角形の相似条件</h4>
+<div class="point"><ul>
+<li>3組の辺の比がすべて等しい。</li>
+<li>2組の辺の比とその間の角がそれぞれ等しい。</li>
+<li>2組の角がそれぞれ等しい。</li>
+</ul></div>
+<p>入試の証明では2組の角が等しいを使うことが多いです。共通な角、対頂角、平行線の錯角、円周角を探します。</p>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>平行線と線分の比</h4>
+<div class="point"><p>△ABCで、辺AB、AC上の点D、Eについて $DE\parallel BC$ のとき</p>
+$$AD:AB=AE:AC=DE:BC,\qquad AD:DB=AE:EC$$</div>
+<p>$DE:BC$ を出すときは $AD:DB$ ではなく $AD:AB$ を使います。ここで間違える人が多いです。</p>
+<div class="ex"><p class="q">上の図で $AD=4$、$DB=2$、$BC=9$ のとき、$DE$ の長さを求めなさい。</p>
+<details><summary>答えを見る</summary><div>$AD:AB=4:6=2:3$ なので $DE=9\times\dfrac23=6$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>中点連結定理</h4>
+<div class="point"><p>△ABCの辺AB、ACの中点をM、Nとすると</p>
+$$MN\parallel BC,\qquad MN=\frac12BC$$</div>
+<div class="ex"><p class="q">四角形ABCDの4辺の中点を順に結んでできる四角形は、どんな四角形になるか。</p>
+<details><summary>答えを見る</summary><div>対角線ACで分けた2つの三角形で中点連結定理を使うと、向かい合う2辺がどちらもACに平行で長さがACの半分。もう一方の対角線でも同じなので、平行四辺形になる。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>角の二等分線と比</h4>
+<div class="point"><p>△ABCで $\angle A$ の二等分線と辺BCの交点をDとすると</p>
+$$AB:AC=BD:DC$$</div>
+<div class="ex"><p class="q">$AB=6$、$AC=4$、$BC=5$ の△ABCで、$\angle A$ の二等分線とBCの交点をDとする。BDの長さを求めなさい。</p>
+<details><summary>答えを見る</summary><div>$BD:DC=6:4=3:2$ なので $BD=5\times\dfrac35=3$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>面積比と体積比</h4>
+<div class="point">$$\text{相似比 } m:n\ \Rightarrow\ \text{面積比 } m^2:n^2,\quad \text{体積比 } m^3:n^3$$</div>
+<div class="ex"><p class="q">相似な2つの円錐の高さが2cmと3cmである。体積の比と、小さいほうの体積が16cm³のときの大きいほうの体積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>体積比は $2^3:3^3=8:27$。$16\times\dfrac{27}{8}=54$ cm³。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-en">
+<h3>円</h3>
+
+<article class="item">
+<h4><span class="no">1</span>円周角の定理</h4>
+<figure>
+<svg viewBox="0 0 180 170" width="180" role="img" aria-label="円の中心O、弧ABに対する中心角と円周角">
+<circle cx="90" cy="85" r="70" fill="none" stroke="currentColor" stroke-width="2"/>
+<line x1="35" y1="128" x2="145" y2="128" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 3"/>
+<polyline points="35,128 90,85 145,128" fill="none" stroke="#2e86ab" stroke-width="2"/>
+<polyline points="35,128 90,15 145,128" fill="none" stroke="#d1495b" stroke-width="2"/>
+<circle cx="90" cy="85" r="2.5" fill="currentColor"/>
+<text x="96" y="82" font-size="12" fill="currentColor">O</text>
+<text x="20" y="142" font-size="12" fill="currentColor">A</text>
+<text x="150" y="142" font-size="12" fill="currentColor">B</text>
+<text x="85" y="10" font-size="12" fill="currentColor">P</text>
+</svg>
+<figcaption>弧ABに対する円周角∠APBは、中心角∠AOBの半分</figcaption>
+</figure>
+<div class="point"><ul>
+<li>1つの弧に対する円周角は、その弧に対する中心角の半分。</li>
+<li>同じ弧に対する円周角はすべて等しい。</li>
+<li>半円の弧に対する円周角（直径を見こむ角）は $90^\circ$。</li>
+</ul></div>
+<div class="ex"><p class="q">弧ABに対する中心角が $140^\circ$ のとき、弧ABに対する円周角を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$140^\circ\div2=70^\circ$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>円周角の定理の逆</h4>
+<div class="point"><p>2点P、Qが直線ABの同じ側にあり $\angle APB=\angle AQB$ なら、4点A、B、P、Qは1つの円周上にある。</p></div>
+<p>図の中に等しい角が2つ見つかったら、4点を通る円をかき加えると、ほかの等しい角も見えてきます。</p>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>接線の長さ</h4>
+<div class="point"><p>円の外の点から引いた2本の接線の長さは等しい。接線は接点を通る半径と垂直に交わる。</p></div>
+<div class="ex"><p class="q">円の外の点Pから円に接線を2本引き、接点をA、Bとする。$\angle APB=50^\circ$、円の中心をOとするとき、$\angle AOB$ を求めなさい。</p>
+<details><summary>答えを見る</summary><div>四角形PAOBで $\angle PAO=\angle PBO=90^\circ$。内角の和 $360^\circ$ から $\angle AOB=360^\circ-90^\circ-90^\circ-50^\circ=130^\circ$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>円と相似</h4>
+<div class="point"><p>円の中で交わる2本の弦や、円と交わる2本の直線があるとき、円周角が等しいことから2組の角が等しい相似な三角形ができる。</p></div>
+<div class="ex"><p class="q">円の2本の弦AB、CDが点Pで交わっている。$PA=4$、$PB=3$、$PC=2$ のとき、PDの長さを求めなさい。</p>
+<details><summary>答えを見る</summary><div>弧BCに対する円周角から $\angle PAC=\angle PDB$、対頂角から $\angle APC=\angle DPB$。よって $\triangle PAC\sim\triangle PDB$ で $PA:PD=PC:PB$。$4:PD=2:3$ より $PD=6$。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-sanheihou">
+<h3>三平方の定理</h3>
+
+<article class="item">
+<h4><span class="no">1</span>三平方の定理</h4>
+<figure>
+<svg viewBox="0 0 180 120" width="180" role="img" aria-label="直角三角形。直角をはさむ辺a、b、斜辺c">
+<polygon points="20,100 160,100 20,20" fill="none" stroke="currentColor" stroke-width="2"/>
+<polyline points="20,88 32,88 32,100" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<text x="86" y="116" font-size="14" fill="currentColor" font-style="italic">a</text>
+<text x="6" y="64" font-size="14" fill="currentColor" font-style="italic">b</text>
+<text x="94" y="54" font-size="14" fill="currentColor" font-style="italic">c</text>
+</svg>
+</figure>
+<div class="point">$$a^2+b^2=c^2\quad(c\text{ は斜辺})$$</div>
+<p>逆に、3辺がこの関係を満たせば直角三角形です。$3:4:5$、$5:12:13$、$8:15:17$ はよく出る整数の組です。</p>
+<div class="ex"><p class="q">直角をはさむ2辺が5cmと12cmの直角三角形の斜辺を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$\sqrt{25+144}=\sqrt{169}=13$ cm。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>特別な直角三角形</h4>
+<div class="point"><ul>
+<li>直角二等辺三角形（$45^\circ,45^\circ,90^\circ$）の辺の比は $1:1:\sqrt2$</li>
+<li>$30^\circ,60^\circ,90^\circ$ の直角三角形の辺の比は $1:\sqrt3:2$（いちばん短い辺：残りの辺：斜辺）</li>
+</ul></div>
+<div class="ex"><p class="q">1辺4cmの正三角形の高さと面積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>高さで分けると $30^\circ,60^\circ,90^\circ$ の三角形になり、斜辺4、短い辺2なので高さは $2\sqrt3$ cm。面積は $\dfrac12\times4\times2\sqrt3=4\sqrt3$ cm²。一般に1辺 $a$ の正三角形の面積は $\dfrac{\sqrt3}{4}a^2$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">3</span>2点間の距離</h4>
+<div class="point">$$AB=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$</div>
+<p>2点を結ぶ線分を斜辺とする直角三角形をつくり、横と縦の長さで三平方の定理を使っています。</p>
+<div class="ex"><p class="q">2点 $A(1,2)$、$B(4,6)$ の間の距離を求めなさい。</p>
+<details><summary>答えを見る</summary><div>$\sqrt{3^2+4^2}=5$。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">4</span>直方体の対角線</h4>
+<div class="point">$$\text{縦 }a,\ \text{横 }b,\ \text{高さ }c\text{ の直方体の対角線}=\sqrt{a^2+b^2+c^2}$$</div>
+<div class="ex"><p class="q">縦2cm、横3cm、高さ6cmの直方体の対角線の長さを求めなさい。</p>
+<details><summary>答えを見る</summary><div>$\sqrt{4+9+36}=\sqrt{49}=7$ cm。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">5</span>円錐の高さ</h4>
+<div class="point"><p>円錐を頂点と底面の中心を通る平面で切ると、母線を斜辺、底面の半径と高さを直角をはさむ辺とする直角三角形が見える。</p></div>
+<div class="ex"><p class="q">母線5cm、底面の半径3cmの円錐の高さと体積を求めなさい。</p>
+<details><summary>答えを見る</summary><div>高さ $\sqrt{25-9}=4$ cm。体積 $\dfrac13\times9\pi\times4=12\pi$ cm³。</div></details></div>
+</article>
+
+<article class="item">
+<h4><span class="no">6</span>弦の長さ</h4>
+<div class="point"><p>円の中心から弦に垂線を下ろすと、垂線は弦を二等分する。半径 $r$、中心から弦までの距離 $d$ なら、弦の長さは $2\sqrt{r^2-d^2}$。</p></div>
+<div class="ex"><p class="q">半径5cmの円で、中心からの距離が3cmの弦の長さを求めなさい。</p>
+<details><summary>答えを見る</summary><div>半分は $\sqrt{25-9}=4$ なので、弦は8cm。</div></details></div>
+</article>
+</section>
+
+<section class="unit" id="u-hyouhon">
+<h3>標本調査</h3>
+
+<article class="item">
+<h4><span class="no">1</span>全数調査と標本調査</h4>
+<div class="point"><ul>
+<li>集団のすべてを調べるのが全数調査、一部を取り出して全体を推測するのが標本調査。</li>
+<li>調べたい集団全体が母集団、取り出した一部が標本。標本はかたよりがないよう無作為に選ぶ。</li>
+</ul></div>
+<p>製品の品質検査のように調べると商品がだめになるものや、全部調べるのに時間や費用がかかりすぎるものは標本調査にします。学校の健康診断や国勢調査は全数調査です。</p>
+</article>
+
+<article class="item">
+<h4><span class="no">2</span>標本から全体を推定する</h4>
+<div class="point"><p>標本の中の割合と、母集団の中の割合はほぼ等しいと考えて比例式を立てる。</p></div>
+<div class="ex"><p class="q">白い玉がたくさん入った袋に、赤い玉を50個入れてよく混ぜた。そこから40個取り出すと赤い玉が4個ふくまれていた。袋の中の白い玉はおよそ何個か。</p>
+<details><summary>答えを見る</summary><div>取り出した玉のうち赤は $\dfrac{4}{40}=\dfrac{1}{10}$。袋全体でも赤が $\dfrac1{10}$ と考えると、全体は $50\times10=500$ 個。白い玉はおよそ $500-50=450$ 個。</div></details></div>
+</article>
+</section>
+</section>
+</main>
+
+<footer>
+<p>例題はすべてこのページのために作ったものです。教科書によって単元の順番や名前が少し違うことがあります。</p>
+</footer>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>
