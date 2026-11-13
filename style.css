@@ -128,6 +128,15 @@ figure { margin: 8px 0; text-align: center; }
 figure svg { max-width: 100%; height: auto; color: var(--text); }
 figcaption { font-size: 13px; color: var(--muted); }
 
+.search { margin: 12px 0 0; }
+.search input {
+  font: inherit; font-size: 16px; width: 100%; box-sizing: border-box; padding: 8px 12px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.search-count { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+[hidden] { display: none !important; }
+
 .tools { display: flex; gap: 8px; margin: 8px 0 0; flex-wrap: wrap; }
 .tools button {
   font: inherit; font-size: 14px; padding: 4px 12px; border-radius: 8px;
